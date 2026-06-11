@@ -40,3 +40,20 @@ Explanation:
 =================================================
 
 """
+def read_files(path):
+    count = 0
+
+    with open(path,"r") as file:
+        for word in file:
+            word = word.strip().lower()
+
+            if ('a' in word and
+                'e' in word and
+                'i' in word and
+                'o' in word and
+                'u' in word) :
+                print(word)
+                count += 1
+    return count
+
+print(f'Total words with all vowels: {read_files("file_reading_practice/sowpods.txt")}')
