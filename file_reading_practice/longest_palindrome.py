@@ -42,3 +42,30 @@ The longest is "malayalam" with 9 characters.
 =================================================
 
 """
+def longest_palindrome(path):
+    with open(path,"r") as files:
+     max = 0
+     max_word = ""
+    
+     for word in files:
+            
+            word = word.strip()
+            letters = list(word)
+            rev = ""
+            
+            while letters:
+              rev += letters.pop()
+            
+            if word == rev:
+               length = len(word)
+               if length > max:
+                   max = length
+                   max_word = word
+            else:
+                continue
+    return (max,max_word)
+print(f'Longest Plaindrome length:  {longest_palindrome("file_reading_practice/sowpods.txt")}')
+  
+
+          
+                

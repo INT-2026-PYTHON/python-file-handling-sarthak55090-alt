@@ -51,3 +51,17 @@ Explanation:
 =================================================
 
 """
+def is_palindrome(path):
+   palindrome_colection = []
+   with open (path,"r") as file:
+      for word in file:
+         word = word.strip()
+         rev = word[::-1]
+
+         if rev == word:
+            print(word)
+        
+         continue
+
+print(is_palindrome("file_reading_practice/sowpods.txt"))
+  
